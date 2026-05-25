@@ -50,7 +50,16 @@ overflow:hidden;background:rgba(0,0,0,0.3);backdrop-filter:blur(20px);display:fl
         .now-playing{text-align:center;margin:15px 0}
         .now-playing-label{font-size:11px;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:2px}
         /* UPDATED: Plain white, walay shadow */
-        .song-title{font-size:18px;font-weight:700;margin-top:5px;color:#fff}
+        .song-title{
+display:inline-block;
+white-space:nowrap;
+padding-left:100%;
+animation:scrollText 10s linear infinite;
+font-size:18px;
+font-weight:700;
+margin-top:5px;
+color:#fff;
+        }
         .listeners{background:rgba(0,0,0,0.4);padding:8px 20px;border-radius:25px;font-size:12px;font-weight:600;margin:10px 0;border:1px solid rgba(255,215,0,0.3)}
         .info-card{background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border-radius:20px;padding:25px;width:100%;border:1px solid rgba(255,255,255,0.2)}
         .info-card h2{color:#FFD700;margin-bottom:20px;text-align:center;font-size:22px}
@@ -117,21 +126,11 @@ color:#fff !important;
 width:100%;
 overflow:hidden;
 white-space:nowrap;
-margin-top:5px;
-}
-
-.song-title{
-display:inline-block;
-padding-left:100%;
-animation:scrollText 12s linear infinite;
-font-size:16px;
-font-weight:700;
-color:#fff;
 }
 
 @keyframes scrollText{
 0%{
-transform:translateX(0);
+transform:translateX(0%);
 }
 100%{
 transform:translateX(-100%);
